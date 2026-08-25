@@ -11,12 +11,6 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-        }
-    
             body {
                 background-color: #003878 ;
                 color: white;
@@ -72,7 +66,7 @@
                 margin-bottom: 25px;
 
             }
-            .sobre-container {
+            .sobreContainer {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -82,14 +76,14 @@
                 margin: 0 auto;
             }
 
-            .sobre-texto {
+            .sobreTexto {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 text-align: left;
             }
 
-            .sobre-texto h2{
+            .sobreTexto h2{
                 font-size: 36px;
                 margin-bottom: 20px;
                 text-transform: uppercase;
@@ -99,26 +93,95 @@
                 align-self: flex-start;
             }
 
-            .sobre-texto p{
+            .sobreTexto p{
                 font-size: 18px;
                 line-height: 1.8;
             }
             
-            .sobre-imagem {
+            .sobreImagem {
                 flex: 1;
                 display: flex;
                 justify-content: center;
-            
+                
             }
-            .foto-perfil {
+            .fotoPerfil {
                 width: 300px;
                 height: 300px;
                 border-radius: 50%;
                 object-fit: cover;
                 border: 4px solid white;
             }
-     
-    </style>
+            
+            h2 {
+                font-size: 36px;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                border-bottom: 3px solid white;
+                display: inline-block;
+                padding-bottom: 5px;
+            }
+
+            .listaInfo {
+                list-style-type: none;
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            .listaInfo li {
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+
+            .gridCards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 25px;
+                width: 100%;
+                max-width: 1100px;
+                margin-top: 20px;
+            }
+
+            .card {
+                background-color:#83b4e4;
+                padding: 25px;
+                border-radius: 8px;
+                border: 1px solid grey;
+                text-align: left;
+            }
+
+            .card h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                color:white;
+            }
+            .card ul {
+                margin-left: 20px;
+                font-size: 16px;
+
+            }
+
+            .card a {
+                color:linen;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+            .card a:hover {
+                text-decoration: underline;
+            }
+
+            .contatoLinks a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .contatoLinks a:hover {
+                text-decoration: underline;
+            }
+
+            </style>
 
 </head>
 
@@ -141,25 +204,97 @@
         </section>
 
         <section id="sobre">
-           <div class="sobre-container">
-
-               <div class="sobre-imagem">
-                   <img src="MinhaFoto.png" alt="Foto de Perfil" class="foto-perfil">
-               </div>
-
-            <div class="sobre-texto">
-                <h2>Sobre Mim</h2>
-
-                <p>
-                    Atualmente sou estudante de Engenharia de Software e gosto bastante de tecnologia e programação. 
-                    Tenho conhecimentos em Python, Java, C e SQL e banco de dados, além de experiências em projetos acadêmicos. 
-                    Estou buscando uma oportunidade na área de TI para colocar meus conhecimentos em prática, 
-                    aprender mais e crescer profissionalmente.
-                </p>
-
+           <div class="sobreContainer">
+               <div class="sobreImagem">
+                   <img src="MinhaFoto.png" alt="Foto de Perfil" class="fotoPerfil">
+                </div>
+                
+                <div class="sobreTexto">
+                    <h2>Sobre Mim</h2>
+                    
+                    <p>
+                        Atualmente sou estudante de Engenharia de Software e gosto bastante de tecnologia e programação. 
+                        Tenho conhecimentos em Python, Java, C e SQL e banco de dados, além de experiências em projetos acadêmicos. 
+                        Estou buscando uma oportunidade na área de TI para colocar meus conhecimentos em prática, 
+                        aprender mais e crescer profissionalmente.
+                    </p>
+                    
+                </div>
             </div>
-        </div>
         </section>
+            
+        <section id="formacao">
+            <h2>Formação</h2>
+            <ul class="listaInfo">
+                <li><strong>Engenharia de Software</strong> - (em andamento) -Universidade La Salle</li>
+                <li><strong>Ensino Médio Completo</strong> - Escola Estadual Marechal Rondon</li>
+                <li><strong>Impressor Gráfico</strong> - SENAI </li>
+            </ul>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência</h2>
+            <div class="gridCards">
+                <div class="card">
+                    <h3>Tramontina - Estágio Administrativo</h3>
+                    <ul>
+                        <li>Montagem e organização de planilhas.</li>
+                        <li>Organização de pedidos para clientes.</li>
+                        <li>Auxílio em tarefas administrativas.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Restaurante - Auxiliar de entregas</h3>
+                    <ul>
+                        <li>Realização de entregas.</li>
+                        <li>Atendimento ao cliente.</li>
+                        <li>Auxílio nas demandas do dia a dia.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="gridCards">
+                <div class="card">
+                    <h3>Sistema de Delivery de um restaurante</h3>
+                    <p>Sistema de delivery com cadastro de clientes, funcionários, 
+                        produtos, pedidos e entregadores, 
+                        aplicando Programação Orientada a Objetos.
+                    </p>
+                    <a href="https://github.com/Junioro0/Projeto-de-POO">Ver Projeto</a>
+                </div>
+
+                <div class="card">
+                    <h3>Sistema de Gastos Pessoais</h3>
+                    <p>Banco de dados desenvolvido para registrar e analisar gastos pessoais, 
+                        com modelagem de entidades, consultas SQL e integração com PostgreSQL.
+                    </p>
+                    <a href="https://github.com/Junioro0/Atividade_Gastos">Ver Projeto</a>
+                </div>
+
+                <div class="card">
+                    <h3>Detector de Golpes</h3>
+                    <p>Projeto desenvolvido em equipe para identificar mensagens com características de golpes, 
+                        aplicando regras de negócio definidas em fluxograma.
+                    </p>
+                    <a href="https://github.com/Junioro0/Challange2">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <ul class ="listaInfo contatoLinks">
+                <li><strong>Email:</strong> <a href="mailto:Junioronaldolima@gmail.com">Junioronaldolima@gmail.com</a></li>
+                <li><strong>Telefone:</strong> +55 (51) 99449-9840</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/Junioro0" target="_blank">github.com/Junioro0</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ronaldo-júnior-2463183a6" target="_blank">linkedin.com/in/ronaldo-júnior</a></li>
+            </ul>
+        </section>
+
     </main>
 </body>
 </html>
